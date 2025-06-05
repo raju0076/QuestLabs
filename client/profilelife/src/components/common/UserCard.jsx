@@ -7,7 +7,7 @@ export const UserProfiles = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users/getUsers")
+    axios.get("https://questlabs-3.onrender.com/users/getUsers")
       .then((res) => setUsers(res.data))
       .catch((err) => console.error("Error fetching users", err));
   }, []);
@@ -27,7 +27,7 @@ export const UserProfiles = () => {
             <div className="w-full md:w-1/2 h-1/2 md:h-auto">
               {(user.photoUrl || user.photo) && (
                 <img
-                  src={user.photoUrl || `http://localhost:3000/uploads/${user.photo}`}
+                  src={user.photoUrl || `https://questlabs-3.onrender.com/uploads/${user.photo}`}
                   alt="profile"
                   className="w-full h-full object-cover"
                 />

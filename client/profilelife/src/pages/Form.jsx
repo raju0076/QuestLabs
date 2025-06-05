@@ -36,7 +36,7 @@ export const Form = () => {
     }
 
     try {
-      await axios.post("http://localhost:3000/users/addUsers", data, {
+      await axios.post("https://questlabs-3.onrender.com/users/addUsers", data, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 
