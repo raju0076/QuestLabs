@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserProfiles } from '../components/common/userCard'
+import { UserProfiles } from '../components/UserProfiles'
 
 
 export const Card = () => {

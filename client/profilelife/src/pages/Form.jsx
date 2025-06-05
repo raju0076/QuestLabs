@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "../styles/form.css";
-import { UserProfiles } from '../components/common/userCard';
 import { Plus } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { UserProfiles } from '../components/UserProfiles';
+
 
 export const Form = () => {
   const [formData, setFormData] = useState({
