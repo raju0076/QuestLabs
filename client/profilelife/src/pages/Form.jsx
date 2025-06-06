@@ -6,7 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserProfiles } from '../components/UserProfiles';
 
-
 export const Form = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -37,7 +36,11 @@ export const Form = () => {
     }
 
     try {
-      await axios.post("https://questlabs-3.onrender.com/users/addUsers", data, {
+      const BASE_URL = import.meta.env.PROD
+        ? 'https://questlabs-3.onrender.com'
+        : 'http://localhost:5000';
+
+      await axios.post(`${BASE_URL}/users/addUsers`, data, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 
