@@ -8,11 +8,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://questlabs-3.onrender.com", 
-  credentials: true,
-}));
-
+app.use(cors())
 app.use(express.json());
 
 app.use("/users", formRouter);
