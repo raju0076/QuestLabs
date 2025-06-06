@@ -37,7 +37,7 @@ export const Form = () => {
 
     try {
       const BASE_URL = import.meta.env.PROD
-        ? 'https://questlabs-3.onrender.com'
+        ? 'https://questlabs-4.onrender.com'
         : 'http://localhost:5000';
 
       await axios.post(`${BASE_URL}/users/addUsers`, data, {
